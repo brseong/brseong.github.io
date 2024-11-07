@@ -11,7 +11,7 @@ Repository mainly lists biologically plausible SNN papers, including reinforceme
 - **Conf. & Year**: AAAI, 2021
 - **Summary**: TBW
 - **Related Papers**: TBW
-- [**Link**](https://www.nature.com/articles/s41598-021-91786-z)
+- [**Link**](https://ojs.aaai.org/index.php/AAAI/article/view/17329)
 
 ### Training (Backpropagation)
 
@@ -20,4 +20,4 @@ Repository mainly lists biologically plausible SNN papers, including reinforceme
 - **Conf. & Year**: Scientific Reports, 2021
 - **Summary**: TBW
 - **Related Papers**: TBW
-- [**Link**](https://ojs.aaai.org/index.php/AAAI/article/view/17329)
+- [**Link**](https://www.nature.com/articles/s41598-021-91786-z)
