@@ -1,4 +1,7 @@
-# Papers of Spiking Neural Networks
+# CV
+Contents
+- [Seminar](seminar/seminar_contents.md)
+
 
 Repository mainly lists biologically plausible SNN papers, including reinforcement learning & neuroscience.
 
