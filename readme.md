@@ -1,12 +1,12 @@
 # CV
 ## Studies
   
-  | Name                                                                                                                                                                       | Description                                                                                        |
-  | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
-  | [Sentiment analysis of online responses in the performing arts with large language models](https://www.sciencedirect.com/science/article/pii/S2405844023096652?via%3Dihub) | Published, First author. [Github link](paper/sentiment-analysis/README.md)                         |
-  | [LBC: Language-Based-Classifier for Out-Of-Variable Generalization](https://arxiv.org/abs/2408.10923)                                                                      | WIP, second author. [Github link](paper/Language-Based-Classifier-forOOV-Generalization/README.md) |
-  | [Towards Efficient Formal Verification of Spiking Neural Network](https://arxiv.org/abs/2408.10900)                                                                        | WIP, first author. [Github link](paper/SNN-Verification-Optimization/README.md)                    |
-  | [(Draft) Accelerating Formal Verification of Spiking Neural Network Using Spike Timing-dependent Plasticity](paper/STDP-verification/README.md)                            | WIP.                                                                                               |
+  | Name                                                                                                                                                                       | Description                                                                                                           |
+  | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+  | [Sentiment analysis of online responses in the performing arts with large language models](https://www.sciencedirect.com/science/article/pii/S2405844023096652?via%3Dihub) | Published, First author. [Github link](https://github.com/brseong/sentiment-analysis)                                 |
+  | [LBC: Language-Based-Classifier for Out-Of-Variable Generalization](https://arxiv.org/abs/2408.10923)                                                                      | WIP, second author. [Github link](https://github.com/ASDASDanonymous/Language-Based-Classifier-forOOV-Generalization) |
+  | [Towards Efficient Formal Verification of Spiking Neural Network](https://arxiv.org/abs/2408.10900)                                                                        | WIP, first author. [Github link](https://github.com/brseong/SNN-Verification-Optimization)                            |
+  | [(Draft) Accelerating Formal Verification of Spiking Neural Network Using Spike Timing-dependent Plasticity](https://github.com/brseong/STDP-verification)                 | WIP.                                                                                                                  |
 
 ## Seminar presentation
   ### Artificial Intelligence
