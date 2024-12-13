@@ -16,3 +16,6 @@
 [submodule "projects/UOS_AI20004_RL/AI20041_CarRacing_Project"]
 	path = projects/UOS_AI20004_RL/AI20041_CarRacing_Project
 	url = https://github.com/UoS-CIDA-Lab/AI20041_CarRacing_Project.git
+[submodule "paper/STDP-verification"]
+	path = paper/STDP-verification
+	url = https://github.com/brseong/STDP-verification.git
