@@ -1,13 +1,16 @@
 # CV
 ## Studies
-  - [Sentiment analysis of online responses in the performing arts with large language models](paper/sentiment-analysis/README.md) (Published, First author)
-  - [LBC: Language-Based-Classifier for Out-Of-Variable Generalization](paper/Language-Based-Classifier-forOOV-Generalization/README.md) (WIP, Second author)
-  - [Towards Efficient Formal Verification of Spiking Neural Network](paper/SNN-Verification-Optimization/README.md) (WIP, First author)
+  
+  | Name                                                                                                                                                                       | Description                                                                                        |
+  | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
+  | [Sentiment analysis of online responses in the performing arts with large language models](https://www.sciencedirect.com/science/article/pii/S2405844023096652?via%3Dihub) | Published, First author. [Github link](paper/sentiment-analysis/README.md)                         |
+  | [LBC: Language-Based-Classifier for Out-Of-Variable Generalization](https://arxiv.org/abs/2408.10923)                                                                      | WIP, second author. [Github link](paper/Language-Based-Classifier-forOOV-Generalization/README.md) |
+  | [Towards Efficient Formal Verification of Spiking Neural Network](https://arxiv.org/abs/2408.10900)                                                                        | WIP, first author. [Github link](paper/SNN-Verification-Optimization/README.md)                    |
 
 ## Seminar presentation
   ### Artificial Intelligence
   
-  | File name                                                                                                                                                                                                                                           | Description |
+  | Name                                                                                                                                                                                                                                                | Description |
   | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
   | [Adversarial robustness of STDP-trained spiking neural networks.pptx](seminar/artificial%20intelligence/Adversarial%20robustness%20of%20STDP-trained%20spiking%20neural%20networks.pptx)                                                            |             |
   | [Auto-Encoding Variational Bayes.pptx](seminar/artificial%20intelligence/Auto-Encoding%20Variational%20Bayes.pptx)                                                                                                                                  |             |
@@ -20,10 +23,16 @@
   
   ### Reinforcement Learning
   
-  | File name                                                                                                   | Description |
-  | ----------------------------------------------------------------------------------------------------------- | ----------- |
-  | [240509_RL.pptx](seminar/reinforcement%20learning/240509_RL.pptx)                                           |             |
-  | [240520_RL.pptx](seminar/reinforcement%20learning/240520_RL.pptx)                                           |             |
-  | [240710_Advantage Actor-Critic.pptx](seminar/reinforcement%20learning/240710_Advantage%20Actor-Critic.pptx) |             |
+  | Name                                                                                                        | Description                                                                                    |
+  | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+  | [240509_RL.pptx](seminar/reinforcement%20learning/240509_RL.pptx)                                           | Preliminary of reinforcement learning (probability theory)                                     |
+  | [240520_RL.pptx](seminar/reinforcement%20learning/240520_RL.pptx)                                           | Value function and expected return                                                             |
+  | [240710_Advantage Actor-Critic.pptx](seminar/reinforcement%20learning/240710_Advantage%20Actor-Critic.pptx) | A2C and neural actor-critic. (Reward prediction error hypothesis of dopamine neuron activity.) |
 
 ## Projects
+| Name                                                                                     | Description                                                   |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [Autocomplete LM]([projects/AutocompleteLM/](https://github.com/brseong/AutocompleteLM)) | 2023 fall semester natural language processing                |
+| [Autonomous driving: Image segmentation](https://github.com/brseong/InternImage)         | 2023 summer vacation Univ. of Seoul AI department competition |
+
+## [Interested papers](Interested%20papers/list.md)
