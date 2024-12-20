@@ -8,8 +8,7 @@
   | [Towards Efficient Formal Verification of Spiking Neural Network](https://arxiv.org/abs/2408.10900)                                                                        | WIP, first author. [Github link](https://github.com/brseong/SNN-Verification-Optimization)                            |
   | [(Draft) Accelerating Formal Verification of Spiking Neural Network Using Spike Timing-dependent Plasticity](https://github.com/brseong/STDP-verification)                 | WIP.                                                                                                                  |
 
-## Seminar presentation
-  ### Artificial Intelligence
+## Seminar presentation (Artificial Intelligence)
   
   | Name                                                                                                                                                                                                                                               | Description                                                         |
   | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -21,14 +20,14 @@
   | [Sequence Approximation Using FeedForward Spiking Neural Network For Spatiotemporal Learning](seminar/artificial%20intelligence/Sequence%20Approximation%20Using%20FeedForward%20Spiking%20Neural%20Network%20For%20Spatiotemporal%20Learning.pdf) | Spiking neural network                                              |
   | [SMT-Based Modeling and Verification of Spiking Neural Networks](seminar/artificial%20intelligence/SMT-Based%20Modeling%20and%20Verification%20of%20Spiking%20Neural%20Networks.pdf)                                                               | Spiking neural network, Formal verification                         |
   
-  
-  ### Reinforcement Learning
+## Seminar presentation (Reinforcement Learning)
   
   | Name                                                                                                        | Description                                                                                    |
   | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
   | [240509_RL.pptx](seminar/reinforcement%20learning/240509_RL.pptx)                                           | Preliminary of reinforcement learning (probability theory)                                     |
   | [240520_RL.pptx](seminar/reinforcement%20learning/240520_RL.pptx)                                           | Value function and expected return                                                             |
   | [240710_Advantage Actor-Critic.pptx](seminar/reinforcement%20learning/240710_Advantage%20Actor-Critic.pptx) | A2C and neural actor-critic. (Reward prediction error hypothesis of dopamine neuron activity.) |
+
 
 ## Projects
 | Name                                                                                       | Description                                                            |
