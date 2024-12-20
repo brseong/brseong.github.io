@@ -30,11 +30,12 @@
 
 
 ## Projects
-| Name                                                                                       | Description                                                            |
-| ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| [UOS AI20041 RL Assignments](https://github.com/singforai/RL_Public_Assignments/tree/main) | Wrote weekly quiz questions as TA.                                     |
-| [UOS AI20041 RL term project](https://github.com/UoS-CIDA-Lab/AI20041_CarRacing_Project)   | Made tutorial and participated in implementing evaluation codes as TA. |
-| [Autocomplete LM]([projects/AutocompleteLM/](https://github.com/brseong/AutocompleteLM))   | 2023 fall semester natural language processing                         |
-| [Autonomous driving: Image segmentation](https://github.com/brseong/InternImage)           | 2023 summer vacation Univ. of Seoul AI department competition          |
+
+  | Name                                                                                       | Description                                                            |
+  | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+  | [UOS AI20041 RL Assignments](https://github.com/singforai/RL_Public_Assignments/tree/main) | Wrote weekly quiz questions as TA.                                     |
+  | [UOS AI20041 RL term project](https://github.com/UoS-CIDA-Lab/AI20041_CarRacing_Project)   | Made tutorial and participated in implementing evaluation codes as TA. |
+  | [Autocomplete LM]([projects/AutocompleteLM/](https://github.com/brseong/AutocompleteLM))   | 2023 fall semester natural language processing                         |
+  | [Autonomous driving: Image segmentation](https://github.com/brseong/InternImage)           | 2023 summer vacation Univ. of Seoul AI department competition          |
 
 ## [Interested papers](Interested%20papers/list.md)
