@@ -22,11 +22,11 @@
   
 ## Seminar presentation (Reinforcement Learning)
   
-  | Name                                                                                                        | Description                                                                                    |
-  | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-  | [240509_RL.pptx](seminar/reinforcement%20learning/240509_RL.pptx)                                           | Preliminary of reinforcement learning (probability theory)                                     |
-  | [240520_RL.pptx](seminar/reinforcement%20learning/240520_RL.pptx)                                           | Value function and expected return                                                             |
-  | [240710_Advantage Actor-Critic.pptx](seminar/reinforcement%20learning/240710_Advantage%20Actor-Critic.pptx) | A2C and neural actor-critic. (Reward prediction error hypothesis of dopamine neuron activity.) |
+  | Name                                                                                           | Description                                                                                    |
+  | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+  | [Introduction to Reinforcement Learning](seminar/reinforcement%20learning/240509_RL.pdf)       | Preliminary of reinforcement learning (probability theory)                                     |
+  | [Introduction to Reinforcement Learning](seminar/reinforcement%20learning/240520_RL.pdf)       | Value function and expected return                                                             |
+  | [Advantage Actor-Critic](seminar/reinforcement%20learning/240710_Advantage%20Actor-Critic.pdf) | A2C and neural actor-critic. (Reward prediction error hypothesis of dopamine neuron activity.) |
 
 
 ## Projects
