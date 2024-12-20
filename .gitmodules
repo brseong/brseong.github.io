@@ -1,21 +1,9 @@
-[submodule "paper/sentiment-analysis"]
-	path = paper/sentiment-analysis
-	url = https://github.com/brseong/sentiment-analysis.git
-[submodule "paper/Language-Based-Classifier-forOOV-Generalization"]
-	path = paper/Language-Based-Classifier-forOOV-Generalization
-	url = https://github.com/brseong/Language-Based-Classifier-forOOV-Generalization.git
 [submodule "projects/AutocompleteLM"]
 	path = projects/AutocompleteLM
 	url = https://github.com/brseong/AutocompleteLM.git
-[submodule "paper/SNN-Verification-Optimization"]
-	path = paper/SNN-Verification-Optimization
-	url = https://github.com/brseong/SNN-Verification-Optimization.git
 [submodule "projects/UOS_AI20004_RL/RL_Public_Assignments"]
 	path = projects/UOS_AI20004_RL/RL_Public_Assignments
 	url = https://github.com/singforai/RL_Public_Assignments.git
 [submodule "projects/UOS_AI20004_RL/AI20041_CarRacing_Project"]
 	path = projects/UOS_AI20004_RL/AI20041_CarRacing_Project
 	url = https://github.com/UoS-CIDA-Lab/AI20041_CarRacing_Project.git
-[submodule "paper/STDP-verification"]
-	path = paper/STDP-verification
-	url = https://github.com/brseong/STDP-verification.git
