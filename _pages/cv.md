@@ -16,25 +16,25 @@ permalink: /cv/
 
 ## Seminar presentation (Artificial Intelligence)
   
-  | Name                                                                                                                                                                                                                                                                  | Description                                                         |
-  | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-  | [Adversarial robustness of STDP-trained spiking neural networks](seminar/artificial%20intelligence/Adversarial%20robustness%20of%20STDP-trained%20spiking%20neural%20networks.pdf){: target="_blank"}                                                                 | Formal verification, Spiking neural network, Reinforcement learning |
-  | [Auto-Encoding Variational Bayes](seminar/artificial%20intelligence/Auto-Encoding%20Variational%20Bayes.pdf){: target="_blank"}                                                                                                                                       | Machine learning                                                    |
-  | [Deep Unsupervised Learning using Nonequilibrium Thermodynamics](seminar/artificial%20intelligence/Deep%20Unsupervised%20Learning%20using%20Nonequilibrium%20Thermodynamics.pdf){: target="_blank"}                                                                   | Machine learning                                                    |
-  | [EVALUATING ROBUSTNESS OF NEURAL NETWORKS WITH MIXED INTEGER PROGRAMMING](seminar/artificial%20intelligence/EVALUATING%20ROBUSTNESS%20OF%20NEURAL%20NETWORKS%20WITH%20MIXED%20INTEGER%20PROGRAMMING.pdf){: target="_blank"}                                           | Formal verification                                                 |
-  | [Formal Validation of Neural Networks as Timed Automata](seminar/artificial%20intelligence/Formal%20Validation%20of%20Neural%20Networks%20as%20Timed%20Automata.pdf){: target="_blank"}                                                                               | Formal verification                                                 |
-  | [Sequence Approximation Using FeedForward Spiking Neural Network For Spatiotemporal Learning](seminar/artificial%20intelligence/Sequence%20Approximation%20Using%20FeedForward%20Spiking%20Neural%20Network%20For%20Spatiotemporal%20Learning.pdf){: target="_blank"} | Spiking neural network                                              |
-  | [SMT-Based Modeling and Verification of Spiking Neural Networks](seminar/artificial%20intelligence/SMT-Based%20Modeling%20and%20Verification%20of%20Spiking%20Neural%20Networks.pdf){: target="_blank"}                                                               | Spiking neural network, Formal verification                         |
-  | [Neural Ordinary Differential Equations](seminar/artificial%20intelligence/Neural%20Ordinary%20Differential%20Equations.pdf){: target="_blank"}                                                                                                                       | Machine learning                                                    |
+  | Name                                                                                                                                                                                                                                                                                   | Description                                                         |
+  | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+  | [Adversarial robustness of STDP-trained spiking neural networks]({{site.baseurl}}/seminar/artificial%20intelligence/Adversarial%20robustness%20of%20STDP-trained%20spiking%20neural%20networks.pdf){: target="_blank"}                                                                 | Formal verification, Spiking neural network, Reinforcement learning |
+  | [Auto-Encoding Variational Bayes]({{site.baseurl}}/seminar/artificial%20intelligence/Auto-Encoding%20Variational%20Bayes.pdf){: target="_blank"}                                                                                                                                       | Machine learning                                                    |
+  | [Deep Unsupervised Learning using Nonequilibrium Thermodynamics]({{site.baseurl}}/seminar/artificial%20intelligence/Deep%20Unsupervised%20Learning%20using%20Nonequilibrium%20Thermodynamics.pdf){: target="_blank"}                                                                   | Machine learning                                                    |
+  | [EVALUATING ROBUSTNESS OF NEURAL NETWORKS WITH MIXED INTEGER PROGRAMMING]({{site.baseurl}}/seminar/artificial%20intelligence/EVALUATING%20ROBUSTNESS%20OF%20NEURAL%20NETWORKS%20WITH%20MIXED%20INTEGER%20PROGRAMMING.pdf){: target="_blank"}                                           | Formal verification                                                 |
+  | [Formal Validation of Neural Networks as Timed Automata]({{site.baseurl}}/seminar/artificial%20intelligence/Formal%20Validation%20of%20Neural%20Networks%20as%20Timed%20Automata.pdf){: target="_blank"}                                                                               | Formal verification                                                 |
+  | [Sequence Approximation Using FeedForward Spiking Neural Network For Spatiotemporal Learning]({{site.baseurl}}/seminar/artificial%20intelligence/Sequence%20Approximation%20Using%20FeedForward%20Spiking%20Neural%20Network%20For%20Spatiotemporal%20Learning.pdf){: target="_blank"} | Spiking neural network                                              |
+  | [SMT-Based Modeling and Verification of Spiking Neural Networks]({{site.baseurl}}/seminar/artificial%20intelligence/SMT-Based%20Modeling%20and%20Verification%20of%20Spiking%20Neural%20Networks.pdf){: target="_blank"}                                                               | Spiking neural network, Formal verification                         |
+  | [Neural Ordinary Differential Equations]({{site.baseurl}}/seminar/artificial%20intelligence/Neural%20Ordinary%20Differential%20Equations.pdf){: target="_blank"}                                                                                                                       | Machine learning                                                    |
 
   
 ## Seminar presentation (Reinforcement Learning)
   
-  | Name                                                                                                              | Description                                                                                    |
-  | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-  | [Introduction to Reinforcement Learning](seminar/reinforcement%20learning/240509_RL.pdf){: target="_blank"}       | Preliminary of reinforcement learning (probability theory)                                     |
-  | [Introduction to Reinforcement Learning](seminar/reinforcement%20learning/240520_RL.pdf){: target="_blank"}       | Value function and expected return                                                             |
-  | [Advantage Actor-Critic](seminar/reinforcement%20learning/240710_Advantage%20Actor-Critic.pdf){: target="_blank"} | A2C and neural actor-critic. (Reward prediction error hypothesis of dopamine neuron activity.) |
+  | Name                                                                                                                               | Description                                                                                    |
+  | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+  | [Introduction to Reinforcement Learning]({{site.baseurl}}/seminar/reinforcement%20learning/240509_RL.pdf){: target="_blank"}       | Preliminary of reinforcement learning (probability theory)                                     |
+  | [Introduction to Reinforcement Learning]({{site.baseurl}}/seminar/reinforcement%20learning/240520_RL.pdf){: target="_blank"}       | Value function and expected return                                                             |
+  | [Advantage Actor-Critic]({{site.baseurl}}/seminar/reinforcement%20learning/240710_Advantage%20Actor-Critic.pdf){: target="_blank"} | A2C and neural actor-critic. (Reward prediction error hypothesis of dopamine neuron activity.) |
 
 
 ## Projects
@@ -46,8 +46,8 @@ permalink: /cv/
   | [Autocomplete LM]([projects/AutocompleteLM/](https://github.com/brseong/AutocompleteLM)){: target="_blank"}   | 2023 fall semester natural language processing                         |
   | [Autonomous driving: Image segmentation](https://github.com/brseong/InternImage){: target="_blank"}           | 2023 summer vacation Univ. of Seoul AI department competition          |
 
-## [Questions]({{site.baseurl}}/_posts/2025-01-04-questions.md)
+## [Questions]({{site.baseurl}}/questions)
 Stores questions appeared while studying.
 
-## [Interested papers]({{site.baseurl}}/_posts/2025-01-04-paper-list.md)
+## [Interested papers]({{site.baseurl}}/paper-list)
 Stores interesting papers.
