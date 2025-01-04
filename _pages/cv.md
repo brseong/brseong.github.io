@@ -49,5 +49,5 @@ permalink: /cv/
 ## [Questions](_posts/questions.md)
 Stores questions appeared while studying.
 
-## [Interested papers](_posts/paper_list.md)
+## [Interested papers](_posts/paper-list.md)
 Stores interesting papers.
