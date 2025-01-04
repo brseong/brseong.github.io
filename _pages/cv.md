@@ -4,8 +4,7 @@ title: CV
 permalink: /cv/
 ---
 
-# CV
-## Studies
+# Studies
   
   | Name                                                                                                                                                                          | Description                                                                                                           |
   | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
@@ -14,7 +13,7 @@ permalink: /cv/
   | [Towards Efficient Formal Verification of Spiking Neural Network](https://arxiv.org/abs/2408.10900){: target="_blank"}                                                        | WIP, first author. [Github link](https://github.com/brseong/SNN-Verification-Optimization)                            |
   | [(Draft) Accelerating Formal Verification of Spiking Neural Network Using Spike Timing-dependent Plasticity](https://github.com/brseong/STDP-verification){: target="_blank"} | WIP.                                                                                                                  |
 
-## Seminar presentation (Artificial Intelligence)
+# Seminar presentation (Artificial Intelligence)
   
   | Name                                                                                                                                                                                                                                                                                   | Description                                                         |
   | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -28,7 +27,7 @@ permalink: /cv/
   | [Neural Ordinary Differential Equations]({{site.baseurl}}/seminar/artificial%20intelligence/Neural%20Ordinary%20Differential%20Equations.pdf){: target="_blank"}                                                                                                                       | Machine learning                                                    |
 
   
-## Seminar presentation (Reinforcement Learning)
+# Seminar presentation (Reinforcement Learning)
   
   | Name                                                                                                                               | Description                                                                                    |
   | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
@@ -37,7 +36,7 @@ permalink: /cv/
   | [Advantage Actor-Critic]({{site.baseurl}}/seminar/reinforcement%20learning/240710_Advantage%20Actor-Critic.pdf){: target="_blank"} | A2C and neural actor-critic. (Reward prediction error hypothesis of dopamine neuron activity.) |
 
 
-## Projects
+# Projects
 
   | Name                                                                                                          | Description                                                            |
   | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -46,8 +45,8 @@ permalink: /cv/
   | [Autocomplete LM]([projects/AutocompleteLM/](https://github.com/brseong/AutocompleteLM)){: target="_blank"}   | 2023 fall semester natural language processing                         |
   | [Autonomous driving: Image segmentation](https://github.com/brseong/InternImage){: target="_blank"}           | 2023 summer vacation Univ. of Seoul AI department competition          |
 
-## [Questions]({{site.baseurl}}/questions)
+# [Questions]({{site.baseurl}}/questions)
 Stores questions appeared while studying.
 
-## [Interested papers]({{site.baseurl}}/paper-list)
+# [Interested papers]({{site.baseurl}}/paper-list)
 Stores interesting papers.
