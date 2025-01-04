@@ -1,3 +1,9 @@
+---
+layout: post
+title:  Questions about Machine Learning
+categories: [Machine Learning]
+---
+
 # Questions
 ## Bishop, Pattern Recognition and Machine Learning
 

@@ -1,3 +1,9 @@
+---
+layout: post
+title:  Interesting Papers
+categories: [Machine Learning, STDP, Spiking Neural Network]
+---
+
 # List
 
 ## Training (STDP)
