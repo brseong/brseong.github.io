@@ -46,8 +46,8 @@ permalink: /cv/
   | [Autocomplete LM]([projects/AutocompleteLM/](https://github.com/brseong/AutocompleteLM)){: target="_blank"}   | 2023 fall semester natural language processing                         |
   | [Autonomous driving: Image segmentation](https://github.com/brseong/InternImage){: target="_blank"}           | 2023 summer vacation Univ. of Seoul AI department competition          |
 
-## [Questions](/_posts/questions)
+## [Questions]({{site.baseurl}}/_posts/2025-01-04-questions.md)
 Stores questions appeared while studying.
 
-## [Interested papers](/_posts/paper-list)
+## [Interested papers]({{site.baseurl}}/_posts/2025-01-04-paper-list.md)
 Stores interesting papers.
