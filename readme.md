@@ -43,5 +43,5 @@
 ## [Questions](questions/questions.md)
 Stores questions appeared while studying.
 
-## [Interested papers](interested%20papers/list.md)
+## [Interested papers](interested_papers/paper_list.md)
 Stores interesting papers.
