@@ -19,6 +19,8 @@
   | [Formal Validation of Neural Networks as Timed Automata.pptx](seminar/artificial%20intelligence/Formal%20Validation%20of%20Neural%20Networks%20as%20Timed%20Automata.pdf)                                                                          | Formal verification                                                 |
   | [Sequence Approximation Using FeedForward Spiking Neural Network For Spatiotemporal Learning](seminar/artificial%20intelligence/Sequence%20Approximation%20Using%20FeedForward%20Spiking%20Neural%20Network%20For%20Spatiotemporal%20Learning.pdf) | Spiking neural network                                              |
   | [SMT-Based Modeling and Verification of Spiking Neural Networks](seminar/artificial%20intelligence/SMT-Based%20Modeling%20and%20Verification%20of%20Spiking%20Neural%20Networks.pdf)                                                               | Spiking neural network, Formal verification                         |
+  | [Neural Ordinary Differential Equations](seminar/artificial%20intelligence/Neural%20Ordinary%20Differential%20Equations.pdf)                                                                                                                       | Machine learning                                                    |
+
   
 ## Seminar presentation (Reinforcement Learning)
   
