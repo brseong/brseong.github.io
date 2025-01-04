@@ -40,8 +40,8 @@
   | [Autocomplete LM]([projects/AutocompleteLM/](https://github.com/brseong/AutocompleteLM)){: target="_blank"}   | 2023 fall semester natural language processing                         |
   | [Autonomous driving: Image segmentation](https://github.com/brseong/InternImage){: target="_blank"}           | 2023 summer vacation Univ. of Seoul AI department competition          |
 
-## [Questions](questions/questions.md)
+## [Questions](_posts/questions.md)
 Stores questions appeared while studying.
 
-## [Interested papers](interested_papers/paper_list.md)
+## [Interested papers](_posts/paper_list.md)
 Stores interesting papers.
