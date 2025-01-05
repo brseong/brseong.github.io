@@ -11,7 +11,7 @@ categories: [Machine Learning, STDP, Spiking Neural Network]
 - **Conf. & Year**: AAAI, 2021
 - **Summary**: TBW
 - **Related Papers**: TBW
-- [**Link**](https://ojs.aaai.org/index.php/AAAI/article/view/17329)
+- [**Link**](https://ojs.aaai.org/index.php/AAAI/article/view/17329){: target="_blank"}
 
 # Training (Backpropagation)
 
@@ -20,4 +20,4 @@ categories: [Machine Learning, STDP, Spiking Neural Network]
 - **Conf. & Year**: Scientific Reports, 2021
 - **Summary**: TBW
 - **Related Papers**: TBW
-- [**Link**](https://www.nature.com/articles/s41598-021-91786-z)
+- [**Link**](https://www.nature.com/articles/s41598-021-91786-z){: target="_blank"}
