@@ -24,9 +24,11 @@ $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\un
 를 계산해야 한다. 그런데 이를 계산하기 위해서는 몇 가지 준비사항이 필요하다. 아래 행렬 미분 식은 PRML appendix C에 실린 공식들의 유도이다.
 
 - 역행렬의 미분 (C.21)
+  
     $$\frac{\partial I_{jk}}{\partial x}=\frac{\partial [AA^{-1}]}{\partial x}=\frac{\partial A}{\partial x}A^{-1}+A\frac{\partial A^{-1}}{\partial x} = 0$$
     $$\implies A\frac{\partial A^{-1}}{\partial x}=-\frac{\partial A}{\partial x}A^{-1}$$
     $$\implies \frac{\partial A^{-1}}{\partial x}=-A^{-1}\frac{\partial A}{\partial x}A^{-1}$$
+
 - $\frac{\partial}{\partial A}\text{Tr}(AB)=B^\top$ (C.23)
     $$\frac{\partial A_{pr}B_{rp}}{\partial A_{ab}}=\frac{\partial A_{pr}}{\partial A_{ab}}B_{rp}+A_{pr}\frac{\partial B_{rp}}{\partial A_{ab}}$$
     $$=\delta_{ap}\delta_{br}B_{rp}+0_{ab}$$
@@ -38,24 +40,28 @@ $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\un
   $$\begin{align}
     =\sum_{n=1}^N\frac{1}{\lambda_n}\frac{\partial \lambda_n}{\partial x}
   \end{align}$$
+
     Assuming $A=A^\top$, then $A$ is orthogonally diagonalizable: $A=U\Lambda U^\top=\sum_{n=1}^N\lambda_n\mathbf{u}_n\mathbf{u}_n^\top.$ Differentiate this equation by $x$.
     $$\frac{\partial A}{\partial x} = \sum_{n=1}^N\left[\frac{\partial\lambda_n}{\partial x}\mathbf{u}_n\mathbf{u}_n^\top+\lambda_n\frac{\partial\mathbf{u}_n}{\partial x}\mathbf{u}_n^\top+\lambda_n\mathbf{u}_n\frac{\partial\mathbf{u}_n^\top}{\partial x}\right]$$
     $$\begin{align}
         \implies A^{-1}\frac{\partial A}{\partial x}&=\sum_{n=1}^N\left[\frac{\partial\lambda_n}{\partial x}A^{-1}\mathbf{u}_n\mathbf{u}_n^\top+\lambda_nA^{-1}\frac{\partial\mathbf{u}_n}{\partial x}\mathbf{u}_n^\top+\lambda_nA^{-1}\mathbf{u}_n\frac{\partial\mathbf{u}_n^\top}{\partial x}\right]\nonumber\\
         &=\sum_{n=1}^N\left[\frac{1}{\lambda_n}\frac{\partial\lambda_n}{\partial x}\mathbf{u}_n\mathbf{u}_n^\top+\lambda_nA^{-1}\frac{\partial\mathbf{u}_n}{\partial x}\mathbf{u}_n^\top+\lambda_n\frac{1}{\lambda_n}\mathbf{u}_n\frac{\partial\mathbf{u}_n^\top}{\partial x}\right]
     \end{align}$$
+
     Since $U$ is orthogonal, $\forall_n \mathbf{u}_n^\top\mathbf{u}_n=1.$ Then,
     $$
         \frac{\partial [\mathbf{u}_n^\top\mathbf{u}_n]}{\partial x}=
             \frac{\partial \mathbf{u}_n^\top}{\partial x}\mathbf{u}_n
             +
             \mathbf{u}_n^\top\frac{\partial \mathbf{u}_n}{\partial x}=0.$$
+
     Because $\left(\frac{\partial \mathbf{u}_n^\top}{\partial x}\mathbf{u}_n\right)^\top=\mathbf{u}_n^\top\frac{\partial \mathbf{u}_n}{\partial x}$ and $\mathbf{u}_n^\top\frac{\partial \mathbf{u}_n}{\partial x}\in\mathbb{R},$
     $$\begin{align}
             \mathbf{u}_n^\top\frac{\partial \mathbf{u}_n}{\partial x}=0.
     \end{align}$$
     <!-- $$\implies\text{Tr}\left(\frac{\partial A}{\partial x}\right)=\left(\frac{\partial A}{\partial x}\right)_{ii}=\frac{\partial\lambda_i}{\partial x}\mathbf{u}_{ij}\mathbf{u}_{ji}=\sum_{n=1}^N\frac{\partial\lambda_n}{\partial x} \cdots (2)$$ -->
     <!-- $$\because \mathbf{u}_{ij}\mathbf{u}_{ji}=I \text{ since orthogonal eigenvectors.}$$ -->
+    
     Continued from $(2)$,
     $$\begin{align}
         \text{Tr}\left(A^{-1}\frac{\partial A}{\partial x}\right)=&\sum_{p=1}^N\left(A^{-1}\frac{\partial A}{\partial x}\right)_{pp}
