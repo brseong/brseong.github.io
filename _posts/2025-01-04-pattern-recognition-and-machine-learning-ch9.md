@@ -12,11 +12,15 @@ K-means 클러스터링은 따로 어려울 게 없었으나, 9.2.1 챕터부터
 
 # 9.2.2
 이 챕터에서는 다변수 미적분을 이용해 노가다하면 식 9.16인
+
 $$0=\sum_{n=1}^N\frac{\pi_k\mathcal{N}(\underline{x}_n|\underline{\mu}_k,\underline{\underline{\Sigma}}_k)}{\sum_j\pi_j\mathcal{N}(\underline{x}_n|\underline{\mu}_j,\underline{\underline{\Sigma}}_j)}\underline{\underline{\Sigma}}^{-1}_k(\underline{x}_n-\underline{\mu}_k)$$
+
 을 쉽게 유도할 수 있다. (텐서 랭크를 언더바로 표시해 책과 표기가 다를 수 있다.) 식 9.17, 9.18도 쉽게 유도가 된다.
 
 하지만 식 9.19에서 막혔는데, 이를 유도하기 위해서는 
+
 $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\underline{\underline{\mu}},\underline{\underline{\underline{\Sigma}}}) = \partial_{\underline{\underline{\Sigma}}_k} \sum_{n=1}^N\ln\sum_{k'=1}^{K}\pi_{k'}\frac{1}{\det(\underline{\underline{\Sigma}})^{\frac12}(2\pi)^{\frac{d}{2}}}\exp{-\frac{1}{2}}\Sigma^{-1}_{k'pq}(x_{np}-\mu_{k'p})(x_{nq}-\mu_{k'q})$$
+
 를 계산해야 한다. 그런데 이를 계산하기 위해서는 몇 가지 준비사항이 필요하다. 아래 행렬 미분 식은 PRML appendix C에 실린 공식들의 유도이다.
 
 - 역행렬의 미분 (C.21)
