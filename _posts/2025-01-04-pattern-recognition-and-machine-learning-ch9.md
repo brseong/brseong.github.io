@@ -61,7 +61,7 @@ $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\un
     \end{align}$$
     <!-- $$\implies\text{Tr}\left(\frac{\partial A}{\partial x}\right)=\left(\frac{\partial A}{\partial x}\right)_{ii}=\frac{\partial\lambda_i}{\partial x}\mathbf{u}_{ij}\mathbf{u}_{ji}=\sum_{n=1}^N\frac{\partial\lambda_n}{\partial x} \cdots (2)$$ -->
     <!-- $$\because \mathbf{u}_{ij}\mathbf{u}_{ji}=I \text{ since orthogonal eigenvectors.}$$ -->
-    
+
     Continued from $(2)$,
     $$\begin{align}
         \text{Tr}\left(A^{-1}\frac{\partial A}{\partial x}\right)=&\sum_{p=1}^N\left(A^{-1}\frac{\partial A}{\partial x}\right)_{pp}
@@ -126,5 +126,67 @@ $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\un
         =&A^{-1}_{qp}\nonumber\\
         =&A^{-\top}_{pq}\qquad\Box\nonumber
   \end{align}$$
+
+# 2.3.4
+식 9.19 옆에 참조로 2.3.4 챕터가 있어 찾아보니, 식 2.122가 굉장히 유사한 모양을 지니고 있었다. 따라서 식 9.19를 먼저 유도해볼 필요성을 느꼈다.
+$$\begin{align*}
+    \frac{\partial}{\partial \Sigma_{pq}}\ln p(\mathbf{X}|\mathbf{\mu},\mathbf{\Sigma})
+    =&\frac{\partial}{\partial \Sigma_{pq}}\sum_{n=1}^N\left[
+        -\frac{1}{2}\ln|\mathbf{\Sigma}|
+        -
+        \frac{N}{2}\ln2\pi
+        -
+        \frac{1}{2}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})^\top\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})
+        \right]\\
+    =&\sum_{n=1}^N\left[
+        -\frac{1}{2}\frac{\partial}{\partial \Sigma_{pq}}\left[\ln|\mathbf{\Sigma}|\right]
+        -
+        \frac{1}{2}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})^\top\frac{\partial}{\partial \Sigma_{pq}}\left[\mathbf{\Sigma}^{-1}\right](\mathbf{\mathbf{x}_n-\mathbf{\mu}})
+        \right]\\
+    =&\sum_{n=1}^N\left[
+        -\frac{1}{2}\text{Tr}\left(\mathbf{\Sigma}^{-1}\frac{\partial\mathbf{\Sigma}}{\partial\Sigma_{pq}}\right)
+        -
+        \frac{1}{2}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})^\top\mathbf{\Sigma}^{-1}\frac{\partial \mathbf{\Sigma}}{\partial \Sigma_{pq}}\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})
+        \right]\qquad\because\ \text{C.21, C.22}\\
+    =&\sum_{n=1}^N\left[
+        -\frac{1}{2}\left(\mathbf{\Sigma}^{-1}\frac{\partial\mathbf{\Sigma}}{\partial\Sigma_{pq}}\right)_{ii}
+        -
+        \frac{1}{2}(\mathbf{x}_{ni}-\mu_{i})\Sigma^{-1}_{ij}\frac{\partial \Sigma_{jk}}{\partial \Sigma_{pq}}\Sigma^{-1}_{kl}(x_{nl}-\mu_{l})
+        \right]\\
+    =&\sum_{n=1}^N\left[
+        -\frac{1}{2}\Sigma^{-1}_{ij}\frac{\partial\Sigma_{ji}}{\partial\Sigma_{pq}}
+        -
+        \frac{1}{2}(\mathbf{x}_{ni}-\mu_{i})\Sigma^{-1}_{ij}\delta_{pj}\delta_{qk}\Sigma^{-1}_{kl}(x_{nl}-\mu_{l})
+        \right]\\
+    =&\sum_{n=1}^N\left[
+        -\frac{1}{2}\Sigma^{-1}_{ij}\delta_{pj}\delta_{qi}
+        -
+        \frac{1}{2}(\mathbf{x}_{ni}-\mu_{i})\Sigma^{-1}_{ip}\Sigma^{-1}_{ql}(x_{nl}-\mu_{l})
+        \right]\\
+    =&\sum_{n=1}^N\left[
+        -\frac{1}{2}\Sigma^{-1}_{qp}
+        -
+        \frac{1}{2}(\mathbf{x}_{ni}-\mu_{i})\Sigma^{-1}_{ip}\Sigma^{-1}_{ql}(x_{nl}-\mu_{l})
+        \right]\\
+    =&-\frac{N}{2}\Sigma^{-1}_{qp}
+    -\sum_{n=1}^N\left[
+        \frac{1}{2}(\mathbf{x}_{ni}-\mu_{i})\Sigma^{-1}_{ip}\Sigma^{-1}_{ql}(x_{nl}-\mu_{l})
+        \right]=0\\
+    \implies&\Sigma^{-1}_{qp}=
+    -\frac{1}{N}\sum_{n=1}^N\left[
+        (\mathbf{x}_{ni}-\mu_{i})\Sigma^{-1}_{ip}\Sigma^{-1}_{ql}(x_{nl}-\mu_{l})
+        \right]\\
+    \implies&\Sigma_{aq}\Sigma^{-1}_{qp}\Sigma_{pb}=
+    -\frac{1}{N}\sum_{n=1}^N\left[
+        \Sigma_{aq}(\mathbf{x}_{ni}-\mu_{i})\Sigma^{-1}_{ip}\Sigma^{-1}_{ql}(x_{nl}-\mu_{l})\Sigma_{pb}
+        \right]\\
+    \implies&\Sigma_{ab}=
+    -\frac{1}{N}\sum_{n=1}^N\left[
+        (\mathbf{x}_{ni}-\mu_{i})\delta_{ib}\delta_{al}(x_{nl}-\mu_{l})
+        \right]\\
+    =&-\frac{1}{N}\sum_{n=1}^N
+        (\mathbf{x}_{nb}-\mu_{b})(x_{na}-\mu_{a})\qquad\Box
+
+\end{align*}$$
 
   *계속 작성 중.*
