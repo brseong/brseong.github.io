@@ -127,27 +127,27 @@ $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\un
         =&A^{-\top}_{pq}\qquad\Box\nonumber
   \end{align}$$
 
-## 2.3.4
+# 2.3.4
 식 9.19 옆에 참조로 2.3.4 챕터가 있어 찾아보니, 식 2.122가 굉장히 유사한 모양을 지니고 있었다. 따라서 식 9.19를 먼저 유도해볼 필요성을 느꼈다.
 
 $$\begin{align*}
-    \frac{\partial}{\partial \Sigma_{pq}}\ln p(\mathbf{X}|\boldsymbol{\mu},\mathbf{\Sigma})
+    \frac{\partial}{\partial \Sigma_{pq}}\ln p(\mathbf{X}|\mathbf{\mu},\mathbf{\Sigma})
     =&\frac{\partial}{\partial \Sigma_{pq}}\sum_{n=1}^N\left[
         -\frac{1}{2}\ln|\mathbf{\Sigma}|
         -
         \frac{N}{2}\ln2\pi
         -
-        \frac{1}{2}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})^\top\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})
+        \frac{1}{2}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})^\top\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})
         \right]\\
     =&\sum_{n=1}^N\left[
         -\frac{1}{2}\frac{\partial}{\partial \Sigma_{pq}}\left[\ln|\mathbf{\Sigma}|\right]
         -
-        \frac{1}{2}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})^\top\frac{\partial}{\partial \Sigma_{pq}}\left[\mathbf{\Sigma}^{-1}\right](\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})
+        \frac{1}{2}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})^\top\frac{\partial}{\partial \Sigma_{pq}}\left[\mathbf{\Sigma}^{-1}\right](\mathbf{\mathbf{x}_n-\mathbf{\mu}})
         \right]\\
     =&\sum_{n=1}^N\left[
         -\frac{1}{2}\text{Tr}\left(\mathbf{\Sigma}^{-1}\frac{\partial\mathbf{\Sigma}}{\partial\Sigma_{pq}}\right)
         -
-        \frac{1}{2}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})^\top\mathbf{\Sigma}^{-1}\frac{\partial \mathbf{\Sigma}}{\partial \Sigma_{pq}}\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})
+        \frac{1}{2}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})^\top\mathbf{\Sigma}^{-1}\frac{\partial \mathbf{\Sigma}}{\partial \Sigma_{pq}}\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})
         \right]\qquad\because\ \text{C.21, C.22}\\
     =&\sum_{n=1}^N\left[
         -\frac{1}{2}\left(\mathbf{\Sigma}^{-1}\frac{\partial\mathbf{\Sigma}}{\partial\Sigma_{pq}}\right)_{ii}
@@ -190,6 +190,7 @@ $$\begin{align*}
 
 \end{align*}$$
 
+<<<<<<< HEAD
 ## 9.2.2 Cont'd
 다시 식 9.19로 돌아오자. 위에서의 식을 이용하여 약간의 기교를 부리면 나름 쉽게 (안 그러면 계산이 상당히 복잡해진다) 9.19를 유도할 수 있다.
 
@@ -308,4 +309,6 @@ $$\begin{align*}
 
 9.2.2 챕터에서는 이제 딱히 어려운 것은 없다. Lagrangian method를 알면 9.21은 계산을 하지 않아도 눈에 보일 것이다.
 
+=======
+>>>>>>> parent of 569f5d1 (250105)
   *계속 작성 중.*

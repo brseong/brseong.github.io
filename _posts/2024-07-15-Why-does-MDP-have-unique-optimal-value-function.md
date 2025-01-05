@@ -1,3 +1,9 @@
+---
+layout: post
+title:  Why does MDP have unique optimal value function?
+categories: [Machine Learning, Reinforcement Learning]
+---
+
 Many lectures or articles discussing reinforcement learning claim that MDPs have a unique optimal value function. But why does it?
 
 First, we need to define what policy is optimal. [1, 3]
