@@ -129,6 +129,7 @@ $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\un
 
 # 2.3.4
 식 9.19 옆에 참조로 2.3.4 챕터가 있어 찾아보니, 식 2.122가 굉장히 유사한 모양을 지니고 있었다. 따라서 식 9.19를 먼저 유도해볼 필요성을 느꼈다.
+
 $$\begin{align*}
     \frac{\partial}{\partial \Sigma_{pq}}\ln p(\mathbf{X}|\mathbf{\mu},\mathbf{\Sigma})
     =&\frac{\partial}{\partial \Sigma_{pq}}\sum_{n=1}^N\left[
