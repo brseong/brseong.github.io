@@ -29,8 +29,7 @@ $$T[\boldsymbol{v}](s)=\max_{a\in\mathcal{A}(s)}\mathbb{E}\left[R_{t+1}+\gamma v
 Bellman optimality operator means a greedy value function improvement, a step of value iteration.
 Now, we can show that $T$ is a contraction mapping in the max norm. We need the definition of the max norm and additional lemma. [1]
 
-**Definition 4**. 
-\\(\|\boldsymbol{v}-\boldsymbol{v}' \|_{\infty}=\max_{s\in\mathcal{S}}| v(s)-v'(s)|.\\)
+**Definition 4**. $\|\boldsymbol{v}-\boldsymbol{v}' \|_{\infty}=\max_{s\in\mathcal{S}}\vert(s)-v'(s)\vert.$
 
 **Lemma 5**. Given a finite set $\mathcal{A}$, for any two real value functions $f_1:\mathcal{A}\to\mathbb{R}$ and $f_2:\mathcal{A}\to\mathbb{R}$ we have
 
