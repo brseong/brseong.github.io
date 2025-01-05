@@ -127,27 +127,27 @@ $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\un
         =&A^{-\top}_{pq}\qquad\Box\nonumber
   \end{align}$$
 
-# 2.3.4
+## 2.3.4
 식 9.19 옆에 참조로 2.3.4 챕터가 있어 찾아보니, 식 2.122가 굉장히 유사한 모양을 지니고 있었다. 따라서 식 9.19를 먼저 유도해볼 필요성을 느꼈다.
 
 $$\begin{align*}
-    \frac{\partial}{\partial \Sigma_{pq}}\ln p(\mathbf{X}|\mathbf{\mu},\mathbf{\Sigma})
+    \frac{\partial}{\partial \Sigma_{pq}}\ln p(\mathbf{X}|\boldsymbol{\mu},\mathbf{\Sigma})
     =&\frac{\partial}{\partial \Sigma_{pq}}\sum_{n=1}^N\left[
         -\frac{1}{2}\ln|\mathbf{\Sigma}|
         -
         \frac{N}{2}\ln2\pi
         -
-        \frac{1}{2}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})^\top\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})
+        \frac{1}{2}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})^\top\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})
         \right]\\
     =&\sum_{n=1}^N\left[
         -\frac{1}{2}\frac{\partial}{\partial \Sigma_{pq}}\left[\ln|\mathbf{\Sigma}|\right]
         -
-        \frac{1}{2}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})^\top\frac{\partial}{\partial \Sigma_{pq}}\left[\mathbf{\Sigma}^{-1}\right](\mathbf{\mathbf{x}_n-\mathbf{\mu}})
+        \frac{1}{2}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})^\top\frac{\partial}{\partial \Sigma_{pq}}\left[\mathbf{\Sigma}^{-1}\right](\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})
         \right]\\
     =&\sum_{n=1}^N\left[
         -\frac{1}{2}\text{Tr}\left(\mathbf{\Sigma}^{-1}\frac{\partial\mathbf{\Sigma}}{\partial\Sigma_{pq}}\right)
         -
-        \frac{1}{2}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})^\top\mathbf{\Sigma}^{-1}\frac{\partial \mathbf{\Sigma}}{\partial \Sigma_{pq}}\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\mathbf{\mu}})
+        \frac{1}{2}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})^\top\mathbf{\Sigma}^{-1}\frac{\partial \mathbf{\Sigma}}{\partial \Sigma_{pq}}\mathbf{\Sigma}^{-1}(\mathbf{\mathbf{x}_n-\boldsymbol{\mu}})
         \right]\qquad\because\ \text{C.21, C.22}\\
     =&\sum_{n=1}^N\left[
         -\frac{1}{2}\left(\mathbf{\Sigma}^{-1}\frac{\partial\mathbf{\Sigma}}{\partial\Sigma_{pq}}\right)_{ii}
@@ -188,6 +188,122 @@ $$\begin{align*}
     =&-\frac{1}{N}\sum_{n=1}^N
         (\mathbf{x}_{nb}-\mu_{b})(x_{na}-\mu_{a})\qquad\Box
 
+\end{align*}$$
+
+## 9.2.2 Cont'd
+다시 식 9.19로 돌아오자. 위에서의 식을 이용하여 약간의 기교를 부리면 나름 쉽게 (안 그러면 계산이 상당히 복잡해진다) 9.19를 유도할 수 있다.
+
+$$\begin{align*}
+    &\frac{\partial}{\partial \Sigma_{kpq}}\ln\prod_{n=1}^N\sum_{k'=1}^K\pi_{k'}\mathcal{N}(\mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})\\
+    =&\sum_{n=1}^N
+        \frac{\partial}{\partial \Sigma_{kpq}}
+        \ln
+        \sum_{k'=1}^K
+            \pi_{k'}
+            \mathcal{N}(
+                    \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})\\
+    =&\sum_{n=1}^N
+        \frac{
+            \frac{\partial}{\partial \Sigma_{kpq}}
+            \pi_{k}
+            \mathcal{N}(
+                    \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})}
+            {\sum_{k'=1}^K
+                \pi_{k'}
+                \mathcal{N}(
+                \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})}\\
+    =&\sum_{n=1}^N
+        \frac{
+            \pi_{k}
+            \frac{\partial \ln\mathcal{N}(\cdot)}{\partial \Sigma_{kpq}}
+            \frac{\partial}{\partial \ln\mathcal{N}(\cdot)}
+            \mathcal{N}(
+                    \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})}
+            {\sum_{k'=1}^K
+                \pi_{k'}
+                \mathcal{N}(
+                \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})}\\
+    =&\sum_{n=1}^N
+        \cfrac{
+            \pi_{k}
+            \left[
+                -\cfrac{1}{2}\Sigma^{-1}_{kqp}
+                -\cfrac{1}{2}(x_{ni}-\mu_{i})\Sigma^{-1}_{kip}\Sigma^{-1}_{kql}(x_{nl}-\mu_{l})
+            \right]
+            \mathcal{N}(
+                    \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})}
+            {\sum_{k'=1}^K
+                \pi_{k'}
+                \mathcal{N}(
+                \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})}=0\\
+    \implies&
+    \Sigma^{-1}_{kqp}\sum_{n=1}^N
+        \cfrac{\pi_{k}
+            \mathcal{N}(
+                    \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})}
+            {\sum_{k'=1}^K
+                \pi_{k'}
+                \mathcal{N}(
+                \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})}
+    =
+    \sum_{n=1}^N
+        \cfrac{
+            \pi_{k}
+            \left[
+                -(x_{ni}-\mu_{i})\Sigma^{-1}_{kip}\Sigma^{-1}_{kql}(x_{nl}-\mu_{l})
+            \right]
+            \mathcal{N}(
+                    \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})}
+            {\sum_{k'=1}^K
+                \pi_{k'}
+                \mathcal{N}(
+                \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})}\\
+    \implies&
+    \Sigma_{kab}\sum_{n=1}^N
+        \cfrac{\pi_{k}
+            \mathcal{N}(
+                    \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})}
+            {\sum_{k'=1}^K
+                \pi_{k'}
+                \mathcal{N}(
+                \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})}
+    =
+    \sum_{n=1}^N
+        \cfrac{
+            \pi_{k}
+            \mathcal{N}(
+                    \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})
+            \left[
+                -(x_{ni}-\mu_{i})\delta_{ib}\delta_{al}(x_{nl}-\mu_{l})
+            \right]}
+            {\sum_{k'=1}^K
+                \pi_{k'}
+                \mathcal{N}(
+                \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})}\\
+    \implies&
+    \Sigma_{kab}\sum_{n=1}^N
+        \gamma(z_{nk})
+    =
+    \sum_{n=1}^N
+        \gamma(z_{nk})
+        \left[
+            -(x_{nb}-\mu_{b})(x_{na}-\mu_{a})
+        \right]\qquad\because\ \gamma(z_{nk})=\cfrac{\pi_{k}
+            \mathcal{N}(
+                    \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})}
+            {\sum_{k'=1}^K
+                \pi_{k'}
+                \mathcal{N}(
+                \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})}\\
+    \implies&
+    \Sigma_{kab}
+    =
+    -
+    \frac{1}{N_k}
+    \sum_{n=1}^N
+        \gamma(z_{nk})
+        (x_{nb}-\mu_{b})(x_{na}-\mu_{a})
+        \qquad\because\ \sum_{n=1}^N\gamma(z_{nk})=N_k\qquad\Box
 \end{align*}$$
 
   *계속 작성 중.*
