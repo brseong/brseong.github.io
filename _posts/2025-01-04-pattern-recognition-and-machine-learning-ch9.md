@@ -2,6 +2,7 @@
 layout: post
 title: Pattern Recognition and Machine Learning Study (Ch9).
 categories: [Machine Learning, Probability]
+use_math: true
 ---
 
 [STDP enables spiking neurons to detect hidden causes of their inputs](https://proceedings.neurips.cc/paper/2009/hash/a5cdd4aa0048b187f7182f1b9ce7a6a7-Abstract.html){: target="_blank"}를 공부하고 있는데, 3번째 문단인 Underlying theoretical principles에 Expectation Maximization (EM) 알고리즘이 등장하여 공부할 필요성을 느꼈다. Bishop의 패턴 인식 (PRML)의 EM 파트는 간략히는 흝어봤었으나, 그 이론적 기반을 제대로 이해하지는 못했기 때문에, 다시 제대로 공부하기로 하였다. 이 글에는 9 챕터를 읽으면서 남은 의문들이나 내가 이해한 바를 서술하였다.

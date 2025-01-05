@@ -2,6 +2,7 @@
 layout: post
 title:  Questions about Machine Learning
 categories: [Machine Learning]
+use_math: true
 ---
 
 # Bishop, Pattern Recognition and Machine Learning
