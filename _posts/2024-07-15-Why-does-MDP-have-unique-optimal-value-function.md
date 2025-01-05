@@ -9,7 +9,7 @@ Many lectures or articles discussing reinforcement learning claim that MDPs have
 
 First, we need to define what policy is optimal. [1, 3]
 
-**Definition 1**. $\pi_{*}$ is an optimal policy if $\forall\pi:\forall s\in\mathcal{S}:v_{\pi_{*}}(s)\ge v_\pi(s).$
+**Definition 1**. $\pi_\star$ is an optimal policy if $\forall\pi:\forall s\in\mathcal{S}:v_{\pi_{*}}(s)\ge v_\pi(s).$
 
 We can derive the fact below by definition of optimal policy. [4]
 
