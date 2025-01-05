@@ -203,8 +203,8 @@ $$\begin{align*}
             \mathcal{N}(
                     \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})\\
     =&\sum_{n=1}^N
-        \frac{
-            \frac{\partial}{\partial \Sigma_{kpq}}
+        \cfrac{
+            \cfrac{\partial}{\partial \Sigma_{kpq}}
             \pi_{k}
             \mathcal{N}(
                     \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})}
@@ -213,10 +213,10 @@ $$\begin{align*}
                 \mathcal{N}(
                 \mathbf{x}_n|\boldsymbol{\mu}_{k'},\boldsymbol{\Sigma}_{k'})}\\
     =&\sum_{n=1}^N
-        \frac{
+        \cfrac{
             \pi_{k}
-            \frac{\partial \ln\mathcal{N}(\cdot)}{\partial \Sigma_{kpq}}
-            \frac{\partial}{\partial \ln\mathcal{N}(\cdot)}
+            \cfrac{\partial \ln\mathcal{N}(\cdot)}{\partial \Sigma_{kpq}}
+            \cfrac{\partial}{\partial \ln\mathcal{N}(\cdot)}
             \mathcal{N}(
                     \mathbf{x}_n|\boldsymbol{\mu}_{k},\boldsymbol{\Sigma}_{k})}
             {\sum_{k'=1}^K
@@ -305,5 +305,7 @@ $$\begin{align*}
         (x_{nb}-\mu_{b})(x_{na}-\mu_{a})
         \qquad\because\ \sum_{n=1}^N\gamma(z_{nk})=N_k\qquad\Box
 \end{align*}$$
+
+9.2.2 챕터에서는 이제 딱히 어려운 것은 없다. Lagrangian method를 알면 9.21은 계산을 하지 않아도 눈에 보일 것이다.
 
   *계속 작성 중.*
