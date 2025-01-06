@@ -550,4 +550,47 @@ $$
 
 지금까지의 내용을 정리하면, Expectation 단계에서는 데이터셋과 파라미터를 이용해 잠재 변수의 조건부 분포를 계산한다. 그 후 Maximization 단계에서는 이 조건부 분포를 이용해 가능도의 기댓값을 만들어내고, (위 식에서의 기댓값 항에 $Z$의 $X$가 주어졌을 때의 확률이 필요하다는 점을 기억하자. 이것은 Expectation 단계에서 계산한 분포이다.) Lagrangian method와 같은 방법으로 해당 기댓값을 최대화하는 파라미터를 찾아낸다.
 
+# 9.3.2
+
+식 9.42에서 대충 말로만 얘기하고 넘어 가는 것이 그렇게 마음에 들지는 않아서, 직접 계산해봤다. $k$ 점 $\mathbf{x}_n$에 가장 가까운 점이라 가정한다.
+
+$$
+\begin{align*}
+    \lim_{\epsilon\to0+}
+    \gamma(z_{nk})
+    =&
+    \lim_{\epsilon\to0+}
+    \frac{
+        \pi_k\exp(-\|\mathbf{x}_n-\boldsymbol{\mu}_k\|^2/2\epsilon)
+    }{
+        \sum_{j=1}^K
+            \pi_j\exp(-\|\mathbf{x}_n-\boldsymbol{\mu}_j\|^2/2\epsilon)
+    }\\
+    =&
+    \lim_{\epsilon\to0+}
+    \cfrac{
+        1
+    }{
+        1
+        +
+        \sum_{j\ne k}
+            \cfrac{\pi_j}{\pi_k}
+            \exp
+            \left[
+                -
+                \cfrac{
+                    \|\mathbf{x}_n-\boldsymbol{\mu}_k\|^2-\|\mathbf{x}_n-\boldsymbol{\mu}_j\|^2 
+                }{
+                    2\epsilon
+                }   
+            \right]
+    }\\
+    =&\frac11\\
+    =&1.
+\end{align*}
+$$
+
+따라서 가장 가까운 클러스터의 책임값이 1이 되게 된다. 이제 $\pi$의 값은 어떤 값이 되든 0만 아니라면 영향이 없다. 이 책임값을 식 9.40에 넣고 전개하면 손쉽게 9.43을 얻을 수 있다.
+
+
 *계속 작성 중.*
