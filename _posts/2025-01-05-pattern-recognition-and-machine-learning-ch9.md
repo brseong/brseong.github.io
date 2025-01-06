@@ -497,22 +497,21 @@ $$
 
 $$
 \begin{align*}
-    \mathbb{E}_{\underline{\underline{Z}}}
-    % \left[
-    %     \ln p\left(
-    %         \underline{\underline{x}},
-    %         \underline{\underline{Z}}
-    %         \middle|
-    %         \underline{\pi},
-    %         \underline{{\underline{\mu}}},
-    %         \underline{\underline{\underline{\Sigma}}}
-    %     \right)
-        % \middle|
-        \underline{\underline{x}},
-        \underline{\pi},
-        \underline{{\underline{\mu}}},
-        \underline{\underline{\underline{\Sigma}}}
-    % \right]
+    \mathbb{E}_{\underline{\underline{Z}}}\left[
+        \ln p\left(
+            \underline{\underline{x}},
+            \underline{\underline{Z}}
+            \middle|
+            \underline{\pi},
+            \underline{{\underline{\mu}}},
+            \underline{\underline{\underline{\Sigma}}}
+        \right)
+        \middle|
+        % \underline{\underline{x}},
+        % \underline{\pi},
+        % \underline{{\underline{\mu}}},
+        % \underline{\underline{\underline{\Sigma}}}
+    \right]
     =&
     \mathbb{E}_{\underline{\underline{Z}}}\left[
         \sum_{n=1}^N
