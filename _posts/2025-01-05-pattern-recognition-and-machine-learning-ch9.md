@@ -493,4 +493,61 @@ $$
 \end{align*}
 $$
 
+마찬가지로 식 9.40도 유도할 수 있다. 책 본문에서는 간략하게 언급하여 혼동의 여지가 있는데, 이 기댓값에서 확률변수는 $\underline{\underline{z}}$ 뿐이다. 즉, $\underline{\underline{x}}$를 이용해 가능도의 기댓값을 추정하는 것이다.
+
+$$
+\begin{align*}
+    \mathbb{E}_{\underline{\underline{Z}}}\left[
+        \ln p\left(
+            \underline{\underline{x}},
+            \underline{\underline{Z}}
+            \middle|
+            \underline{\pi},
+            \underline{{\underline{\mu}}},
+            \underline{\underline{\underline{\Sigma}}}
+        \right)
+        \middle|
+        \underline{\underline{x}},
+        \underline{\pi},
+        \underline{{\underline{\mu}}},
+        \underline{\underline{\underline{\Sigma}}}
+    \right]
+    =&
+    \mathbb{E}_{\underline{\underline{Z}}}\left[
+        \sum_{n=1}^N
+            \sum_{k=1}^K
+                Z_{nk}
+                \left[
+                    \ln
+                    \pi_k
+                    \mathcal{N}\left(
+                        \underline{x}_n
+                        \middle|
+                        \underline{\mu}_k,
+                        \underline{\underline{\Sigma}}_k
+                    \right)
+                \right]
+    \right]
+    \\
+    =&
+    \sum_{n=1}^N
+        \sum_{k=1}^K    
+    \mathbb{E}_{\underline{\underline{Z}}}\left[
+        Z_{nk}
+        \ln
+        \pi_k
+        \mathcal{N}\left(
+            \underline{x}_n
+            \middle|
+            \underline{\mu}_k,
+            \underline{\underline{\Sigma}}_k
+        \right)
+    \right]
+\end{align*}
+$$
+
+여기서 기댓값 안 $\ln$ 내부 값은 $Z_{nk}$가 어떤 것으로 선택되든 상관 없이 항상 고정되어 있다. 따라서 기댓값 밖으로 나올 수 있고, 이는 곧 식 9.40이 된다.
+
+지금까지의 내용을 정리하면, Expectation 단계에서는 데이터셋과 파라미터를 이용해 잠재 변수의 조건부 분포를 계산한다. 그 후 Maximization 단계에서는 이 조건부 분포를 이용해 가능도의 기댓값을 만들어내고, (위 식에서의 기댓값 항에 $Z$의 $X$가 주어졌을 때의 확률이 필요하다는 점을 기억하자. 이것은 Expectation 단계에서 계산한 분포이다.) Lagrangian method와 같은 방법으로 해당 기댓값을 최대화하는 파라미터를 찾아낸다.
+
 *계속 작성 중.*
