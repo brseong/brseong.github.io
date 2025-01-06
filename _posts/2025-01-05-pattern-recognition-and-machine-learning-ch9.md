@@ -497,52 +497,52 @@ $$
 
 $$
 \begin{align*}
-    \mathbb{E}_{\underline{\underline{Z}}}\left[
-        \ln p\left(
-            \underline{\underline{x}},
-            \underline{\underline{Z}}
-            \middle|
-            \underline{\pi},
-            \underline{{\underline{\mu}}},
-            \underline{\underline{\underline{\Sigma}}}
-        \right)
-        \middle|
-        \underline{\underline{x}},
-        \underline{\pi},
-        \underline{{\underline{\mu}}},
-        \underline{\underline{\underline{\Sigma}}}
-    \right]
-    % =&
     % \mathbb{E}_{\underline{\underline{Z}}}\left[
-    %     \sum_{n=1}^N
-    %         \sum_{k=1}^K
-    %             Z_{nk}
-    %             \left[
-    %                 \ln
-    %                 \pi_k
-    %                 \mathcal{N}\left(
-    %                     \underline{x}_n
-    %                     \middle|
-    %                     \underline{\mu}_k,
-    %                     \underline{\underline{\Sigma}}_k
-    %                 \right)
-    %             \right]
-    % \right]
-    % \\
-    % =&
-    % \sum_{n=1}^N
-    %     \sum_{k=1}^K    
-    % \mathbb{E}_{\underline{\underline{Z}}}\left[
-    %     Z_{nk}
-    %     \ln
-    %     \pi_k
-    %     \mathcal{N}\left(
-    %         \underline{x}_n
+    %     \ln p\left(
+    %         \underline{\underline{x}},
+    %         \underline{\underline{Z}}
     %         \middle|
-    %         \underline{\mu}_k,
-    %         \underline{\underline{\Sigma}}_k
+    %         \underline{\pi},
+    %         \underline{{\underline{\mu}}},
+    %         \underline{\underline{\underline{\Sigma}}}
     %     \right)
+    %     \middle|
+    %     \underline{\underline{x}},
+    %     \underline{\pi},
+    %     \underline{{\underline{\mu}}},
+    %     \underline{\underline{\underline{\Sigma}}}
     % \right]
+    =&
+    \mathbb{E}_{\underline{\underline{Z}}}\left[
+        \sum_{n=1}^N
+            \sum_{k=1}^K
+                Z_{nk}
+                \left[
+                    \ln
+                    \pi_k
+                    \mathcal{N}\left(
+                        \underline{x}_n
+                        \middle|
+                        \underline{\mu}_k,
+                        \underline{\underline{\Sigma}}_k
+                    \right)
+                \right]
+    \right]
+    \\
+    =&
+    \sum_{n=1}^N
+        \sum_{k=1}^K    
+    \mathbb{E}_{\underline{\underline{Z}}}\left[
+        Z_{nk}
+        \ln
+        \pi_k
+        \mathcal{N}\left(
+            \underline{x}_n
+            \middle|
+            \underline{\mu}_k,
+            \underline{\underline{\Sigma}}_k
+        \right)
+    \right]
 \end{align*}
 $$
 
