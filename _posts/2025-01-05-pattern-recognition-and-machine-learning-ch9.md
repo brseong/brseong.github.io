@@ -7,10 +7,13 @@ use_math: true
 
 [STDP enables spiking neurons to detect hidden causes of their inputs](https://proceedings.neurips.cc/paper/2009/hash/a5cdd4aa0048b187f7182f1b9ce7a6a7-Abstract.html){: target="_blank"}를 공부하고 있는데, 3번째 문단인 Underlying theoretical principles에 Expectation Maximization (EM) 알고리즘이 등장하여 공부할 필요성을 느꼈다. Bishop의 패턴 인식 (PRML)의 EM 파트는 간략히는 흝어봤었으나, 그 이론적 기반을 제대로 이해하지는 못했기 때문에, 다시 제대로 공부하기로 하였다. 이 글에는 9 챕터를 읽으면서 남은 의문들이나 내가 이해한 바를 서술하였다.
 
-# 9.2.1
+
+# 9.2
+
+## 9.2.1
 K-means 클러스터링은 따로 어려울 게 없었으나, 9.2.1 챕터부터 이해하기 어려운 것들이 등장하였다. 특히 일부 서술의 경우에는 머리를 싸맸으나 별다른 답을 찾지 못하였다. ([다변량 가우시안의 붕괴에 대한 서술이라든지.]({{site.baseurl}}/questions))
 
-# 9.2.2
+## 9.2.2
 이 챕터에서는 다변수 미적분을 이용해 노가다하면 식 9.16인
 
 $$0=\sum_{n=1}^N\frac{\pi_k\mathcal{N}(\underline{x}_n|\underline{\mu}_k,\underline{\underline{\Sigma}}_k)}{\sum_j\pi_j\mathcal{N}(\underline{x}_n|\underline{\mu}_j,\underline{\underline{\Sigma}}_j)}\underline{\underline{\Sigma}}^{-1}_k(\underline{x}_n-\underline{\mu}_k)$$
@@ -59,8 +62,6 @@ $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\un
     $$\begin{align}
             \mathbf{u}_n^\top\frac{\partial \mathbf{u}_n}{\partial x}=0.
     \end{align}$$
-    <!-- $$\implies\text{Tr}\left(\frac{\partial A}{\partial x}\right)=\left(\frac{\partial A}{\partial x}\right)_{ii}=\frac{\partial\lambda_i}{\partial x}\mathbf{u}_{ij}\mathbf{u}_{ji}=\sum_{n=1}^N\frac{\partial\lambda_n}{\partial x} \cdots (2)$$ -->
-    <!-- $$\because \mathbf{u}_{ij}\mathbf{u}_{ji}=I \text{ since orthogonal eigenvectors.}$$ -->
 
     Continued from $(2)$,
     $$\begin{align}
@@ -127,7 +128,7 @@ $$\partial_{\underline{\underline{\Sigma}}_k}\ln p(\underline{\underline{x}}|\un
         =&A^{-\top}_{pq}\qquad\Box\nonumber
   \end{align}$$
 
-# 2.3.4
+### 2.3.4
 식 9.19 옆에 참조로 2.3.4 챕터가 있어 찾아보니, 식 2.122가 굉장히 유사한 모양을 지니고 있었다. 따라서 식 9.19를 먼저 유도해볼 필요성을 느꼈다.
 
 $$\begin{align*}
@@ -308,7 +309,9 @@ $$\begin{align*}
 
 9.2.2 챕터에서는 이제 딱히 어려운 것은 없다. Lagrangian method를 알면 9.21은 계산을 하지 않아도 눈에 보일 것이다.
 
-# 9.3.1
+# 9.3
+
+## 9.3.1
 
 식이 전반적으로 깨끗해져서 대부분은 직관적으로 보이나, 9.39의 경우 약간 직관적이지 않다. 일단,  본문에서 제시하는 관측값과 잠재함수의 결합분포를 살펴보자.
 
@@ -551,7 +554,7 @@ $$
 
 지금까지의 내용을 정리하면, Expectation 단계에서는 데이터셋과 파라미터를 이용해 잠재 변수의 조건부 분포를 계산한다. 그 후 Maximization 단계에서는 이 조건부 분포를 이용해 가능도의 기댓값을 만들어내고, (위 식에서의 기댓값 항에 $Z$의 $X$가 주어졌을 때의 확률이 필요하다는 점을 기억하자. 이것은 Expectation 단계에서 계산한 분포이다.) Lagrangian method와 같은 방법으로 해당 기댓값을 최대화하는 파라미터를 찾아낸다.
 
-# 9.3.2
+## 9.3.2
 
 식 9.42에서 대충 말로만 얘기하고 넘어 가는 것이 그렇게 마음에 들지는 않아서, 직접 계산해봤다. $k$ 점 $\mathbf{x}_n$에 가장 가까운 점이라 가정한다.
 
@@ -593,5 +596,110 @@ $$
 
 따라서 가장 가까운 클러스터의 책임값이 1이 되게 된다. 이제 $\pi$의 값은 어떤 값이 되든 0만 아니라면 영향이 없다. 이 책임값을 식 9.40에 넣고 전개하면 손쉽게 9.43을 얻을 수 있다. 보다시피 분산을 0으로 보내기 때문에, K-means 클러스터링은 분산을 고려할 수 없다.
 
+## 9.3.3
 
-*계속 작성 중.*
+추후 작성 예정.
+
+## 9.3.4
+
+추후 작성 예정.
+
+# 9.4
+
+갑자기 식 9.70에서 KL divergence가 튀어나온다. 확률에 익숙하지 않은 경우, 약간 까다로울 수 있다. 편의상 볼드 처리는 하지 않았다.
+
+$$
+\begin{align*}
+    \ln p(X|\theta)
+    &=
+    \sum_{Z}
+    q(Z)
+    \ln
+        p(
+            X|\theta
+        )\\
+    &=
+    \sum_{Z}
+    q(Z)
+    \ln
+        \frac{
+            p(
+                X|\theta
+            )
+        }{
+            q(Z)
+        }
+        q(Z)\\
+    &=
+    \sum_{Z}
+    q(Z)
+    \ln
+        \frac{
+            p(X|\theta)
+        }{
+            q(Z)
+        }
+        \frac{
+            p(X,Z|\theta)
+        }{
+            p(X,Z|\theta)
+        }
+        q(Z)\\
+    &=
+    \sum_{Z}
+    q(Z)
+    \ln
+        \frac{
+            1
+        }{
+            q(Z)
+        }
+        \frac{
+            p(X,Z|\theta)
+        }{
+            p(Z|X,\theta)
+        }
+        q(Z)\\
+    &=
+    \sum_{Z}
+    q(Z)
+    \ln
+        \frac{
+            q(Z)
+        }{
+            p(Z|X,\theta)
+        }
+        \frac{
+            p(X,Z|\theta)
+        }{
+            q(Z)
+        }\\
+    &=
+    \sum_{Z}
+    q(Z)
+    \left(
+        \ln
+            \frac{
+                p(X,Z|\theta)
+            }{
+                q(Z)
+            }
+        -
+        \ln
+            \frac{
+                p(Z|X,\theta)
+            }{
+                q(Z)
+            }
+    \right)\\
+    &=\mathcal{L}(q,\theta) + \text{KL}(q||p)
+\end{align*}
+$$
+
+KL divergence가 0 이상임을 고려한다면, 로그 가능도는 $\mathcal{L}$ 이하로 작아질 수 없다.
+
+이제 일반화된 EM에 대해 이야기해보자. E 단계에서 하한 $\mathcal{L}$이 $q$에 대해 최대화된다는 것은, 왼쪽 항이 $q$에 의존하지 않는 상수이기 때문에, KL divergence를 최소화하여 0으로 만든다는 것이고, 이는 발산에 있는 항인 $p(Z|X, \theta)$와 $q(z)$ 가 같아져야 한다는 의미다. 간단히 말해서, $q$라는 함수를 $p(Z|X,\theta)$로 치환하면 Expectation 과정이 끝나게 된다.
+
+Maximization 단계에서는 가능도를 최대화하는 파라미터 값 $\theta$를 구하게 된다. 이 때 $q$를 고정하고 KL divergence는 신경쓰지 않으며 하한 $\mathcal{L}$을 최대화한다. 이렇게 하한이 증가하면, KL은 항상 0보다 크거나 같아야 하기 때문에, 가능도 $p$는 반드시 증가한다.
+
+9.4장의 나머지 부분에서 크게 까다로운 내용은 없었다. 식 9.78의 경우 분모인 $N_k^\text{new}$로 통분하고 본문에 나온 9.17과 9.18를 대입하면 쉽게 얻을  수 있다.
