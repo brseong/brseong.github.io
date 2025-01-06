@@ -512,37 +512,37 @@ $$
         \underline{{\underline{\mu}}},
         \underline{\underline{\underline{\Sigma}}}
     \right]
-    =&
-    \mathbb{E}_{\underline{\underline{Z}}}\left[
-        \sum_{n=1}^N
-            \sum_{k=1}^K
-                Z_{nk}
-                \left[
-                    \ln
-                    \pi_k
-                    \mathcal{N}\left(
-                        \underline{x}_n
-                        \middle|
-                        \underline{\mu}_k,
-                        \underline{\underline{\Sigma}}_k
-                    \right)
-                \right]
-    \right]
-    \\
-    =&
-    \sum_{n=1}^N
-        \sum_{k=1}^K    
-    \mathbb{E}_{\underline{\underline{Z}}}\left[
-        Z_{nk}
-        \ln
-        \pi_k
-        \mathcal{N}\left(
-            \underline{x}_n
-            \middle|
-            \underline{\mu}_k,
-            \underline{\underline{\Sigma}}_k
-        \right)
-    \right]
+    % =&
+    % \mathbb{E}_{\underline{\underline{Z}}}\left[
+    %     \sum_{n=1}^N
+    %         \sum_{k=1}^K
+    %             Z_{nk}
+    %             \left[
+    %                 \ln
+    %                 \pi_k
+    %                 \mathcal{N}\left(
+    %                     \underline{x}_n
+    %                     \middle|
+    %                     \underline{\mu}_k,
+    %                     \underline{\underline{\Sigma}}_k
+    %                 \right)
+    %             \right]
+    % \right]
+    % \\
+    % =&
+    % \sum_{n=1}^N
+    %     \sum_{k=1}^K    
+    % \mathbb{E}_{\underline{\underline{Z}}}\left[
+    %     Z_{nk}
+    %     \ln
+    %     \pi_k
+    %     \mathcal{N}\left(
+    %         \underline{x}_n
+    %         \middle|
+    %         \underline{\mu}_k,
+    %         \underline{\underline{\Sigma}}_k
+    %     \right)
+    % \right]
 \end{align*}
 $$
 
