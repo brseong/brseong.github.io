@@ -507,11 +507,11 @@ $$
             \underline{\underline{\mu}},
             \underline{\underline{\underline{\Sigma}}}
         \right)
-        % \middle|
-        % \underline{\underline{x}},
-        % \underline{\pi},
-        % \underline{\underline{\mu}},
-        % \underline{\underline{\underline{\Sigma}}}
+        \middle|
+        \underline{\underline{x}},
+        \underline{\pi},
+        \underline{\underline{\mu}},
+        \underline{\underline{\underline{\Sigma}}}
     \right]
     =&
     \mathbb{E}_{\underline{\underline{Z}}}\left[
