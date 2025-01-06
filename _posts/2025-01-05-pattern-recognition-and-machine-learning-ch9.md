@@ -497,7 +497,8 @@ $$
 
 $$
 \begin{align*}
-    \mathbb{E}_{\underline{\underline{Z}}}\left[
+    \mathbb{E}_{\underline{\underline{Z}}}
+    % \left[
     %     \ln p\left(
     %         \underline{\underline{x}},
     %         \underline{\underline{Z}}
@@ -506,12 +507,12 @@ $$
     %         \underline{{\underline{\mu}}},
     %         \underline{\underline{\underline{\Sigma}}}
     %     \right)
-        \middle|
+        % \middle|
         \underline{\underline{x}},
         \underline{\pi},
         \underline{{\underline{\mu}}},
         \underline{\underline{\underline{\Sigma}}}
-    \right]
+    % \right]
     =&
     \mathbb{E}_{\underline{\underline{Z}}}\left[
         \sum_{n=1}^N
@@ -590,7 +591,7 @@ $$
 \end{align*}
 $$
 
-따라서 가장 가까운 클러스터의 책임값이 1이 되게 된다. 이제 $\pi$의 값은 어떤 값이 되든 0만 아니라면 영향이 없다. 이 책임값을 식 9.40에 넣고 전개하면 손쉽게 9.43을 얻을 수 있다.
+따라서 가장 가까운 클러스터의 책임값이 1이 되게 된다. 이제 $\pi$의 값은 어떤 값이 되든 0만 아니라면 영향이 없다. 이 책임값을 식 9.40에 넣고 전개하면 손쉽게 9.43을 얻을 수 있다. 보다시피 분산을 0으로 보내기 때문에, K-means 클러스터링은 분산을 고려할 수 없다.
 
 
 *계속 작성 중.*
