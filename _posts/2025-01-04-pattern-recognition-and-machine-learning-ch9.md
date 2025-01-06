@@ -15,7 +15,7 @@ K-means 클러스터링은 따로 어려울 게 없었으나, 9.2.1 챕터부터
 
 $$0=\sum_{n=1}^N\frac{\pi_k\mathcal{N}(\underline{x}_n|\underline{\mu}_k,\underline{\underline{\Sigma}}_k)}{\sum_j\pi_j\mathcal{N}(\underline{x}_n|\underline{\mu}_j,\underline{\underline{\Sigma}}_j)}\underline{\underline{\Sigma}}^{-1}_k(\underline{x}_n-\underline{\mu}_k)$$
 
-을 쉽게 유도할 수 있다. (텐서 랭크를 언더바로 표시해 책과 표기가 다를 수 있다.) 식 9.17, 9.18도 쉽게 유도가 된다.
+을 쉽게 유도할 수 있다. (텐서 랭크를 언더바로 표시해 책과 표기가 다를 수 있다. 그닥 엄밀하지는 않지만 밑줄이 하나면 벡터, 밑줄이 두개면 행렬 이런 식으로 생각하면 된다.) 식 9.17, 9.18도 쉽게 유도가 된다.
 
 하지만 식 9.19에서 막혔는데, 이를 유도하기 위해서는 
 
@@ -312,8 +312,185 @@ $$\begin{align*}
 
 식이 전반적으로 깨끗해져서 대부분은 직관적으로 보이나, 9.39의 경우 약간 직관적이지 않다. 일단,  본문에서 제시하는 관측값과 잠재함수의 결합분포를 살펴보자.
 
-$$p(\mathbf{x},\mathbf{z}|\mu,\Sigma)$$
+$$\begin{align}
+    p \left(
+            \underline{x},\underline{z} \middle| \underline{\pi}, \underline{\underline{\mu}}, \underline{\underline{\underline{\Sigma}}}
+            \right)
+        =
+        \prod_{k=1}^K\pi_k^{z_k}
+            \mathcal{N}\left(
+                \underline{x} | \underline{\mu}_k, \underline{\underline{\Sigma}}_k
+            \right)^{z_k}    
+\end{align}
+$$
 
+여기서 $z$를 주변화 하면,
 
+$$\begin{align*}
+    p \left(
+            \underline{x} \middle| \underline{\pi}, \underline{\underline{\mu}}, \underline{\underline{\underline{\Sigma}}}
+            \right)
+        =&
+        \sum_{\underline{z'}\in\{\mathbf{e}_1,\mathbf{e}_1,\ldots,\mathbf{e}_K\}}
+            \prod_{k=1}^K
+            \left[
+                \pi_k
+                \mathcal{N}\left(
+                    \underline{x} \middle| \underline{\mu}_k, \underline{\underline{\Sigma}}_k
+                \right)
+            \right]^{z'_k}\\
+        =&
+        \sum_{l=1}^K
+            \prod_{k=1}^K
+            \left[
+                \pi_k
+                \mathcal{N}\left(
+                    \underline{x} \middle| \underline{\mu}_k, \underline{\underline{\Sigma}}_k
+                \right)
+            \right]^{\delta_{lk}}\\
+        =&
+        \sum_{l=1}^K
+            \left[
+                \pi_l
+                \mathcal{N}\left(
+                    \underline{x} \middle| \underline{\mu}_l, \underline{\underline{\Sigma}}_l
+                \right)
+            \right]
+\end{align*}
+$$
 
-  *계속 작성 중.*
+이전 챕터에서 많이 보았던 주변화된 Gaussian mixture가 된다. 식 9.35는 단순히 식 $(4)$를 여러 개 곱한 것이다. 거기에 라그랑주 승수법을 적용하면 식 9.37를 도출할 수 있다. 그럼 이제 식 9.38은 조건부확률의 정의로부터 자연스럽게 도출할 수 있다.
+
+$$
+\begin{align*}
+    p\left(
+        \underline{\underline{z}}
+        \middle|
+        \underline{\underline{x}},
+        \underline{\pi},
+        \underline{\underline{\mu}},
+        \underline{\underline{\underline{\Sigma}}}
+    \right)
+    =&
+    \frac{
+        p\left(\underline{\underline{x}},
+            \underline{\underline{z}}
+            \middle|
+            \underline{\pi},
+            \underline{\underline{\mu}},
+            \underline{\underline{\underline{\Sigma}}}
+        \right)
+    }{  
+        p\left(
+            \underline{\underline{x}}
+            \middle|
+            \underline{\pi},
+            \underline{\underline{\mu}},
+            \underline{\underline{\underline{\Sigma}}}
+        \right)
+    }
+\end{align*}
+$$
+
+이로부터 식 9.39를 전개해 보자. $\underline{z}$ 가 one-hot vector라는 점을 상기하자.
+
+$$
+\begin{align*}
+    \mathbb{E}\left[z_{nk}
+                    \middle|
+                    \underline{\underline{x}},
+                    \underline{\pi},
+                    \underline{\underline{\mu}},
+                    \underline{\underline{\underline{\Sigma}}}
+                    \right]
+    =&
+    \sum_{z_{nk}\in\{0,1\}}
+        z_{nk}
+        \,
+        p\left(
+            z_{nk}
+            \middle|
+            \underline{\underline{x}},
+            \underline{\pi},
+            \underline{\underline{\mu}},
+            \underline{\underline{\underline{\Sigma}}}
+            \right)\\
+    =&
+    \sum_{z_{nk}\in\{0,1\}}
+        z_{nk}
+        \frac{
+            p\left(\underline{x}_n,
+                \underline{z}_{n}
+                \middle|
+                \underline{\pi},
+                \underline{\underline{\mu}},
+                \underline{\underline{\underline{\Sigma}}}
+            \right)
+        }{  
+            p\left(
+                \underline{x}_n
+                \middle|
+                \underline{\pi},
+                \underline{\underline{\mu}},
+                \underline{\underline{\underline{\Sigma}}}
+            \right)
+        }\qquad\because\ \text{Assuming i.i.d. of }\underline{\underline{x}}.\\
+    =&
+    \sum_{z_{nk}\in\{0,1\}}
+        z_{nk}
+        \frac{
+            \prod_{k'=1}^K
+            \left(
+                \pi_{k'}
+                \,
+                \mathcal{N}
+                \left(
+                    \underline{x}_n
+                    \middle|
+                    \underline{\mu}_{k'},
+                    \underline{\underline{\Sigma}}_{k'}
+                \right)
+            \right)^{z_{nk'}}
+        }{  
+            \sum_{k'=1}^K
+                \pi_{k'}
+                \,
+                \mathcal{N}\left(
+                    \underline{x}_n
+                    \middle|
+                    \underline{\mu}_{k'},
+                    \underline{\underline{\Sigma}}_{k'}
+                    \right)
+        }\\
+    =&
+    \frac{
+        \pi_{k}
+        \,
+        \mathcal{N}
+        \left(
+            \underline{x}_n
+            \middle|
+            \underline{\mu}_{k},
+            \underline{\underline{\Sigma}}_{k}
+        \right)
+    }{  
+        \sum_{k'=1}^K
+            \pi_{k'}
+            \,
+            \mathcal{N}\left(
+                \underline{x}_n
+                \middle|
+                \underline{\mu}_{k'},
+                \underline{\underline{\Sigma}}_{k'}
+                \right)
+    }\\
+    &\qquad
+    \because
+    \ 
+    z_{nk}=1\implies \forall\ k'\ne k:z_{nk'}=0\ \text{(one-hot vector)}
+    \\
+    =&\gamma(z_{nk})
+\end{align*}
+$$
+
+*계속 작성 중.*
