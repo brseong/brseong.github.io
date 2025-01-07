@@ -11,7 +11,7 @@ This paper is accepted to NIPS 2009. (Currently mainly called NeurIPS.)
 
 Authors desinged a simple network that is working on MNIST dataset.
 
-![Fig.1]({{site.baseurl}}/_posts/images/stdp-enables-spiking-neurons-to-detect-hidden-causes-of-their-inputs-fig1.png)
+![Fig.1](/_posts/images/stdp-enables-spiking-neurons-to-detect-hidden-causes-of-their-inputs-fig1.png)
 
 
 Population coding is utilized to encode real-valued input variables $\underline{\underline{x}}$ into binary-valued input $\underline{\underline{y}}$. More detailed explaination will be in [section 3](#3-underlying-theoretical-principles). Moreover, winner-takes-all (WTA) mechanism is applied to this architecture. There is one thing notable in WTA is the winning probability of each neuron, which follows softmax distribution:
