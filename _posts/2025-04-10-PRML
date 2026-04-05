@@ -1,0 +1,109 @@
+---
+layout: post
+title: Pattern Recognition and Machine Learning Study (Ch1 Exercises-Part 1)
+categories: [Machine Learning, Probability]
+use_math: true
+---
+
+Based on my handwritten notes, this post records the solutions to the exercises 1.1 through 1.13 of PRML Chapter 1.
+
+## 1.1
+This problem is about minimizing the error function $E(\vec{w})$.
+$$E(\vec{w}) = \frac{1}{2} \sum_{n=1}^N \{y(x_n, \vec{w}) - t_n\}^2$$
+Here, the polynomial is $y(x, \vec{w}) = \sum_{j=0}^M w_j x^j$.
+We find the point where the partial derivative with respect to the weight $w_i$ becomes 0.
+$$\frac{\partial E}{\partial w_i} = \sum_{n=1}^N \{y(x_n, \vec{w}) - t_n\} x_n^i = 0$$
+$$\sum_{n=1}^N \left( \sum_{j=0}^M w_j x_n^j \right) x_n^i - \sum_{n=1}^N t_n x_n^i = 0$$
+$$\sum_{j=0}^M \left( \sum_{n=1}^N x_n^{i+j} \right) w_j = \sum_{n=1}^N t_n x_n^i$$
+
+Letting $A_{ij} = \sum_{n=1}^N x_n^{i+j}$ and $T_i = \sum_{n=1}^N t_n x_n^i$, we obtain the following linear equation:
+$$\sum_{j=0}^M A_{ij}w_j = T_i$$
+
+## 1.2
+Minimizing the error function $\tilde{E}(\vec{w})$ with an added regularization term.
+$$\tilde{E}(\vec{w}) = \frac{1}{2} \sum_{n=1}^N \{y(x_n, \vec{w}) - t_n\}^2 + \frac{\lambda}{2} \|\vec{w}\|^2$$
+Similarly, we take the partial derivative with respect to $w_i$.
+$$\frac{\partial \tilde{E}}{\partial w_i} = \sum_{n=1}^N \{y(x_n, \vec{w}) - t_n\} x_n^i + \lambda w_i = 0$$
+$$\sum_{j=0}^M \left( \sum_{n=1}^N x_n^{i+j} \right) w_j + \lambda w_i = \sum_{n=1}^N t_n x_n^i$$
+Using the Kronecker delta $\delta_{ij}$ to express $\lambda w_i = \sum_{j=0}^M \lambda \delta_{ij} w_j$, it can be rearranged as follows:
+$$\sum_{j=0}^M (A_{ij} + \lambda \delta_{ij})w_j = T_i$$
+
+## 1.3
+A probability problem. We calculate the probability of picking a fruit from the boxes.
+Given probabilities: $P(r) = 0.2, P(b) = 0.2, P(g) = 0.6$
+The total probability of choosing an apple is as follows:
+$$P(\text{apple}) = 0.2 \cdot \frac{1}{10} + 0.2 \cdot \frac{1}{2} + 0.6 \cdot \frac{3}{10} = \frac{0.2 + 1 + 1.8}{10} = \frac{3}{10}$$
+Using Bayes' theorem, we find the conditional probability that it was box $g$ given that an orange was picked.
+$$P(g|\text{orange}) = \frac{0.6 \cdot \frac{3}{10}}{0.2 \cdot \frac{9}{10} + 0.2 \cdot \frac{1}{2} + 0.6 \cdot \frac{3}{10}} = \frac{0.18}{0.18 + 0.1 + 0.18} = \frac{0.18}{0.36} = \frac{1}{2}$$
+
+## 1.4
+Finding the position of the maximum value of a probability density function under a change of variables.
+$$p_y(y) = p_x(x) \left| \frac{dx}{dy} \right| = p_x(g(y)) |g'(y)|$$
+To find the maximum, we differentiate and find the point $\hat{y}$ where it equals 0.
+$$\frac{\partial p_y(y)}{\partial y} \bigg|_{\hat{y}} = 0$$
+Applying the product rule yields the following:
+$$p_x'(g(\hat{y})) (\pm g'(\hat{y})^2) + p_x(g(\hat{y})) (\pm g''(\hat{y})) = 0$$
+
+## 1.5
+Proof of the basic property of variance.
+$$Var[f] = E[(f(x) - E[f(x)])^2]$$
+$$= E[f^2 - 2fE[f] + E[f]^2]$$
+Rearranging by the linearity of expectation,
+$$= E[f^2] - 2(E[f])^2 + E[f]^2 = E[f^2] - E[f]^2$$
+
+## 1.6
+Showing that the covariance is 0 when two variables $x$ and $y$ are independent ($x \perp y$).
+$$Cov(x,y) = E[(x - E[x])(y - E[y])]$$
+$$= E[xy - xE[y] - yE[x] + E[x]E[y]]$$
+$$= E[xy] - 2E[x]E[y] + E[x]E[y]$$
+Since they are independent, $E[xy] = E[x]E[y]$ holds.
+$$= E[x]E[y] - E[x]E[y] = 0$$
+
+## 1.7
+Solving the Gaussian integral using the polar coordinate system.
+Substituting $x = r\cos\theta, y = r\sin\theta$, the Jacobian determinant is $|J| = r$.
+$$\int_0^{2\pi} \int_0^\infty \exp\left(-\frac{1}{2\sigma^2}r^2\right) r dr d\theta$$
+Substituting $u = -\frac{1}{2\sigma^2}r^2$ gives $du = -\frac{1}{\sigma^2}r dr$.
+The calculation results in $I^2 = 2\pi\sigma^2$, so we get $I = \sigma\sqrt{2\pi}$.
+
+## 1.8
+Proof of the mean and variance of the Gaussian distribution.
+$$\mathcal{N}(x|\mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} \exp \left\{ -\frac{1}{2\sigma^2}(x - \mu)^2 \right\}$$
+The mean $E[x]$ can be shown to be $\mu$ through the substitution $t = x - \mu$.
+By differentiating the equation that the total integral is 1 with respect to $\sigma^2$, we derive $E[x^2] = \mu^2 + \sigma^2$.
+Consequently, $Var(x) = E[x^2] - E[x]^2 = \mu^2 + \sigma^2 - \mu^2 = \sigma^2$.
+
+## 1.9
+The differentiation process to find the mode of a multivariate Gaussian distribution.
+We take the partial derivative of the exponent with respect to $x_k$ and find where it equals 0.
+$$\frac{\partial}{\partial x_k} \left( -\frac{1}{2} (x_i - \mu_i)(\Sigma^{-1})_{ij}(x_j - \mu_j) \right) = 0$$
+Rearranging using the chain rule and symmetry,
+$$(\Sigma^{-1})_{ik}(x_i - \mu_i) = 0$$
+Thus, it has its maximum at $\mathbf{x} = \boldsymbol{\mu}$ ($x_k = \mu_k$).
+
+## 1.10
+Proof of the addition rule for expectation and variance.
+Linearity of expectation:
+$$E[x+z] = \int \int (x+z)p(x,z)dxdz = \int x p(x)dx + \int z p(z)dz = E[x] + E[z]$$
+Variance for independent variables:
+$$Var[x+z] = \int \int ((x-\mu_x) + (z-\mu_z))^2 p(x,z) dxdz$$
+The cross-term disappears due to the independence condition ($Cov(x,z)=0$), resulting in $Var(x) + Var(z)$.
+
+## 1.11
+Maximum Likelihood Estimation (MLE) of a 1-dimensional Gaussian distribution.
+Differentiate the log-likelihood $\ln p$ with respect to $\mu$ and $\sigma^2$, respectively.
+$$\frac{\partial \ln p}{\partial \mu} = \sum_{n=1}^N \frac{x_n - \mu}{\sigma^2} = 0 \implies \mu_{ML} = \frac{1}{N}\sum_{n=1}^N x_n$$
+$$\frac{\partial \ln p}{\partial \sigma^2} = 0 \implies \sigma^2_{ML} = \frac{1}{N}\sum_{n=1}^N (x_n - \mu)^2$$
+
+## 1.12
+Proof of the bias of the MLE variance.
+$E[x_n x_m]$ is $\mu^2 + \sigma^2$ when $n=m$, and $\mu^2$ otherwise.
+$$E[\mu_{ML}] = \mu$$
+$$E[\sigma^2_{ML}] = E \left[ \frac{1}{N}\sum_{n=1}^N (x_n - \mu_{ML})^2 \right]$$
+By expanding this and applying the expectation, we ultimately obtain the following result, confirming it is a biased estimator.
+$$E[\sigma^2_{ML}] = \frac{N-1}{N}\sigma^2$$
+
+## 1.13
+The expectation of the variance estimator when the population mean is known.
+$$E \left[ \frac{1}{N}\sum_{n=1}^N (x_n - \mu)^2 \right] = \frac{1}{N}\sum_{n=1}^N (E[x_n^2] - 2\mu E[x_n] + \mu^2)$$
+$$= E[x_n^2] - 2\mu^2 + \mu^2 = Var(x)$$
